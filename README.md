@@ -23,6 +23,8 @@ MAVEN_COMMAND=-DsuiteXmlFile=src/test/java/newtest.xml
 MAVEN_COMMAND=-Dtest=Testng
 //This runs the method test1 from the Testng class
 MAVEN_COMMAND=-Dtest=Testng#test1
+//This runs the group called weekly
+MAVEN_COMMAND=-Dgroups=weekly
 ```
 
 Image run with parameters example

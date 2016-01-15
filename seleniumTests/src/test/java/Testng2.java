@@ -33,7 +33,7 @@ public class Testng2 {
   public void title() {
     driver.get("http://www.google.com");
    	String titles = driver.getTitle();
-    Assert.assertEquals(titles, "Googles"); 
+    Assert.assertEquals(titles, "Google"); 
     System.out.println("Numero 2");
   }
  

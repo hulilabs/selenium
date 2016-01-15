@@ -39,6 +39,13 @@ RUN apt-get update && apt-get install -y \
 #=============================
 ADD lib /lib 
 
+
+#================================
+# Copy Maven Dependencies Folder
+#================================
+RUN mkdir /root/.m2 && \
+		tar -zxvf /lib/repository.tar.gz -C /root/.m2
+
 #===============
 # Testing code
 #===============
@@ -54,7 +61,8 @@ VOLUME /root/.m2
 # BROWSER -> The browser to be tested on (firefox, chrome)
 # MAVEN_COMMAND -> Run a single method, test or suite 
 #===========================================================
-ENV BROWSER chrome MAVEN_COMMAND ""
+ENV BROWSER chrome
+ENV MAVEN_COMMAND ""
 
 ENV DISPLAY :0.0
 

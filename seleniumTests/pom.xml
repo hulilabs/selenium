@@ -6,7 +6,7 @@
     <version>1</version>
     <name>sample-maven-build</name>
     <properties>
-        <suiteXmlFile>src/main/java/newtest.xml</suiteXmlFile>
+        <suiteXmlFile>src/test/java/newtest2.xml</suiteXmlFile>
     </properties>
     <build>
         <!-- Source directory configuration -->
@@ -26,6 +26,7 @@
             <!-- Compiler plugin configures the java version to be usedfor compiling
                 the code -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
@@ -38,14 +39,14 @@
     <dependencies>
         <!-- Dependency libraries to include for compilation -->
         <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>2.48.2</version>
+        </dependency>
+        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>2.48.2</version>
         </dependency>
     </dependencies>
 </project>
