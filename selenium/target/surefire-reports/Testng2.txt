@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: Testng2
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.796 sec <<< FAILURE! - in Testng2
-title(Testng2)  Time elapsed: 1.665 sec  <<< FAILURE!
-java.lang.AssertionError: expected [Googles] but found [Google]
-	at Testng2.title(Testng2.java:36)
-
