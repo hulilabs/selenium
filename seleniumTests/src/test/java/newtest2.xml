@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" verbose="2">
-  <test name="Test">
-    <classes>
-      <class name="Testng2"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
