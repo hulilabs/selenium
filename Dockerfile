@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y \
 		#================
 		# Code Directory
 		#================
-		mkdir -p /seleniumTests/src/test/java
+		mkdir -p /selenium/src/test/java
 
 #=============================
 # Directory with dependencies
@@ -49,7 +49,7 @@ RUN mkdir /root/.m2 && \
 #===============
 # Testing code
 #===============
-VOLUME /seleniumTests
+VOLUME /selenium
 
 #===================
 # Maven repository
@@ -66,4 +66,4 @@ ENV MAVEN_COMMAND ""
 
 ENV DISPLAY :0.0
 
-CMD xvfb-run --auto-servernum --server-num=0 mvn ${MAVEN_COMMAND} test -f seleniumTests/pom.xml -Dbrowser=${BROWSER}
+CMD xvfb-run --auto-servernum --server-num=0 mvn ${MAVEN_COMMAND} test -f selenium/pom.xml -Dbrowser=${BROWSER}

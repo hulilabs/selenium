@@ -7,7 +7,7 @@ This image contains an environment in Debian to run selenium tests on Firefox an
 
 ### How to use this image
 ```sh
-$ docker run -t -v $(pwd)/seleniumTests:/seleniumTests huli/Selenium
+$ docker run -t -v $(pwd)/selenium:/selenium huli/selenium
 ```
 You need to set the volume to where the testing code resides.
 #### Image parameters
@@ -30,6 +30,6 @@ MAVEN_COMMAND=-Dgroups=weekly
 Image run with parameters example
 
 ```
-$ docker run -t -v $(pwd)/seleniumTests:/seleniumTests -e BROWSER=chrome -e MAVEN_COMMAND=-Dtest=Testng2 huli/Selenium
+$ docker run -t -v $(pwd)/selenium:/selenium -e BROWSER=chrome -e MAVEN_COMMAND=-Dtest=Testng2 huli/selenium
 
 ```
