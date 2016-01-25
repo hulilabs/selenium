@@ -34,14 +34,18 @@ public class Testng2 {
 
   @Test(description = "Open create account page")
   public void title() throws InterruptedException{
-    driver.get("http://huli-phr#login");
+    /*driver.get("http://huli-phr#login");
     Thread.sleep(4000);
     WebElement boton = driver.findElement(By.id("register-action"));
     boton.click();
     Thread.sleep(4000);
     WebElement boton2 = driver.findElement(By.cssSelector("div.register-component > form > h1.title"));
     System.out.println(boton2.getText());
-    Assert.assertEquals("Creá tu cuenta", boton2.getText(),"The account creation page wasn't opened correctly");
+    Assert.assertEquals("Creá tu cuenta", boton2.getText(),"The account creation page wasn't opened correctly");*/
+    driver.get("http://www.google.com");
+    String titles = driver.getTitle();
+    Assert.assertEquals(titles, "Google"); 
+    System.out.println("Numero 1");
   }
  
 }
