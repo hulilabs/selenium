@@ -35,6 +35,9 @@ public class Testng2 {
   @Test(description = "Open create account page")
   public void title() throws InterruptedException{
     driver.get("http://huli-phr#login");
+    driver.get("http://huli-phr#login");
+    System.out.println("Viene el body");
+    System.out.println(driver.findElement( By.tagName("body")).getText());
     Thread.sleep(4000);
     WebElement boton = driver.findElement(By.id("register-action"));
     boton.click();
