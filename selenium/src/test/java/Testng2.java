@@ -39,9 +39,9 @@ public class Testng2 {
     WebElement boton = driver.findElement(By.id("register-action"));
     boton.click();
     Thread.sleep(4000);
-    WebElement boton2 = driver.findElement(By.cssSelector("div.register-component > form > h1.title"));
+    WebElement boton2 = driver.findElement(By.id("back-action"));
     System.out.println(boton2.getText());
-    Assert.assertEquals("Creá tu cuenta", boton2.getText(),"The account creation page wasn't opened correctly");
+    Assert.assertEquals("Ya tengo una cuenta", boton2.getText(),"The account creation page wasn't opened correctly");
     /*driver.get("http://www.google.com");
     String titles = driver.getTitle();
     Assert.assertEquals(titles, "Google"); 
