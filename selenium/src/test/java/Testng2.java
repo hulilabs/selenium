@@ -35,11 +35,14 @@ public class Testng2 {
   @Test(description = "Open create account page")
   public void title() throws InterruptedException{
     driver.get("http://huli-phr#login");
-    Thread.sleep(4000);
+    Thread.sleep(8000);
+     System.out.println("Viene el titulo");
+    System.out.println(driver.getTitle());
     System.out.println("Viene el body");
     System.out.println(driver.findElement( By.tagName("body")).getText());
     WebElement boton = driver.findElement(By.id("register-action"));
     boton.click();
+    System.out.println("Fin del body");
     Thread.sleep(4000);
     WebElement boton2 = driver.findElement(By.id("back-action"));
     System.out.println(boton2.getText());
