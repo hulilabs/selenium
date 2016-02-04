@@ -36,22 +36,10 @@ public class Testng2 {
 
   @Test(description = "Open create account page")
   public void title() throws InterruptedException{
-    driver.get("http://huli-phr#login");
-    WebElement registerButton = (new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("register-action"))));
-    System.out.println("Viene el titulo");
-    System.out.println(driver.getTitle());
-    System.out.println("Viene el body");
-    System.out.println(driver.findElement( By.tagName("body")).getText());
-    registerButton.click();
-    System.out.println("Fin del body");
-    Thread.sleep(4000);
-    WebElement boton2 = driver.findElement(By.id("back-action"));
-    System.out.println(boton2.getText());
-    Assert.assertEquals("Ya tengo una cuenta", boton2.getText(),"The account creation page wasn't opened correctly");
-    /*driver.get("http://www.google.com");
+    driver.get("http://www.google.com");
     String titles = driver.getTitle();
     Assert.assertEquals(titles, "Google"); 
-    System.out.println("Numero 1");*/
+    System.out.println("Numero 1");
   }
- 
+
 }
